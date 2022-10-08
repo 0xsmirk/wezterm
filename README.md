@@ -1,8 +1,11 @@
 # wezterm
-wezterm跨平台终端配置
+
+| wezterm跨平台终端配置
+| wezterm官方文档:https://wezfurlong.org/wezterm/
 
 ## 0x01.配置文件路径
 
 windows平台下在C:\\Users\\用户名\\.wezterm.lua
 
 Linux平台下在/home/用户名/.config/wezterm/wezterm.lua
+
