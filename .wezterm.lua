@@ -24,7 +24,6 @@ end
 切换Tab: alt+1/2/.../8
 屏幕左右分割: ctrl+shift+s
 屏幕上下分割: ctrl+shift+d
-分割的屏幕之间移动: ctrl+shift+上下左右
 分割的屏幕之间移动: ctrl+shift+hjkl（与本人的neovim配置一致）
 全屏显示: ctrl+f11
 --]]
