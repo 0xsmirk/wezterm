@@ -19,13 +19,14 @@ end
 
 --[[
 --本人常用快捷键:
---创建新Wezterm: ctrl+shift+n
---创建新Tab: ctrl+shift+t
---切换Tab: alt+1/2/.../8
---屏幕左右分割: ctrl+shift+s
---屏幕上下分割: ctrl+shift+d
---分割的屏幕之间移动: ctrl+shift+上下左右
---全屏显示: ctrl+f11
+创建新Wezterm: ctrl+shift+n
+创建新Tab: ctrl+shift+t
+切换Tab: alt+1/2/.../8
+屏幕左右分割: ctrl+shift+s
+屏幕上下分割: ctrl+shift+d
+分割的屏幕之间移动: ctrl+shift+上下左右
+分割的屏幕之间移动: ctrl+shift+hjkl（与本人的neovim配置一致）
+全屏显示: ctrl+f11
 --]]
 
 -- 重新定义Tab切换快捷键
@@ -58,6 +59,32 @@ table.insert(mykeys, {
     key = 'F11',
     mods = 'CTRL',
     action = wezterm.action.ToggleFullScreen,
+})
+
+-- 重新定义分屏窗口切换快捷键
+-- 描述：通过ctrl+shift+hjkl
+table.insert(mykeys,  {
+    key = 'h', --左侧的分屏窗口
+    mods = 'CTRL|SHIFT',
+    action = act.ActivatePaneDirection 'Left',
+})
+
+table.insert(mykeys, {
+    key = 'l', -- 右侧的分屏窗口
+    mods = 'CTRL|SHIFT',
+    action = act.ActivatePaneDirection 'Right',
+})
+
+table.insert(mykeys, {
+    key = 'k', -- 上侧的分屏窗口
+    mods = 'CTRL|SHIFT',
+    action = act.ActivatePaneDirection 'Up',
+})
+
+table.insert(mykeys, {
+    key = 'j', -- 下侧的分屏窗口
+    mods = 'CTRL|SHIFT',
+    action = act.ActivatePaneDirection 'Down',
 })
 
 local config = {
